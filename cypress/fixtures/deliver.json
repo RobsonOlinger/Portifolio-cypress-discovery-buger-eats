@@ -1,0 +1,50 @@
+{
+    "signup": {
+        "nome": "Robson Souza",
+        "cpf": "00864152685",
+        "email": "gamesolinger@gmail.com",
+        "whatsapp": "+5592992061170",
+        "endereco": {
+            "cep": "69073130",
+            "rua": "Rua Claudiano Moreira",
+            "numero": "824",
+            "complemento": "Ap 07",
+            "bairro": "São Lázaro",
+            "cidade_uf": "Manaus/AM"
+        },
+        "metodo_entrega": "Moto",
+        "cnh": "cnh-digital.jpg"
+    },
+    "cpf_invalido": {
+        "nome": "Brenda Capry",
+        "cpf": "008641526xxcv",
+        "email": "capry@gmail.com",
+        "whatsapp": "+5592994006646",
+        "endereco": {
+            "cep": "69073130",
+            "rua": "Rua Claudiano Moreira",
+            "numero": "824",
+            "complemento": "Ap 07",
+            "bairro": "São Lázaro",
+            "cidade_uf": "Manaus/AM"
+        },
+        "metodo_entrega": "Moto",
+        "cnh": "cnh-digital.jpg"
+    },
+    "email_invalido": {
+        "nome": "Bia Capry",
+        "cpf": "00864256256",
+        "email": "capry.com.br",
+        "whatsapp": "+5592994006646",
+        "endereco": {
+            "cep": "69073130",
+            "rua": "Rua Claudiano Moreira",
+            "numero": "824",
+            "complemento": "Ap 07",
+            "bairro": "São Lázaro",
+            "cidade_uf": "Manaus/AM"
+        },
+        "metodo_entrega": "Moto",
+        "cnh": "cnh-digital.jpg"
+    }
+}
