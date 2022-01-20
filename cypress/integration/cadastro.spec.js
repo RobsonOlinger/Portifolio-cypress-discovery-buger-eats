@@ -25,7 +25,7 @@ import SignupPage from '../pages/SignupPage'
 // })
 
 
-describe('Cadastro', () => {//suite de teste
+describe.skip('Cadastro', () => {//suite de teste
 
     //so usa este codigo se for usar o json no formato de fixtures
     // beforeEach(function () {
