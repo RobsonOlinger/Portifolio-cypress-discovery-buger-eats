@@ -2,7 +2,7 @@ pipeline {
     agent any
   
   parameters{
-    string(name: "SPEC", defaultValue: "cypress/integration/**/**", description "cypress:integration")
+    string(name: "SPEC", defaultValue: "cypress/integration/cadastro.spec.js", description "cypress:integration")
     choice(name: "BROWSER", choises: ['chrome','edge','firefox'], description: "usar navegador")
 
   }
