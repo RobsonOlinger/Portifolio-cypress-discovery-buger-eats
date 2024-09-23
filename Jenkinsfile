@@ -19,8 +19,8 @@ pipeline {
   }
   stages('Testing'){
     steps{
-        bat "npm i"
-        bat "npm cypress run"
+       
+        bat "npx cypress run"
     }
   }
 
@@ -32,7 +32,7 @@ pipeline {
 
   post{
     always{
-        
+
     }
   }
 }
