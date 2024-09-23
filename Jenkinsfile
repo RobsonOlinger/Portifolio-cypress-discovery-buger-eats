@@ -1,38 +1,39 @@
 pipeline {
     agent any
-  
-  parameters{
-    string(name: "SPEC", defaultValue: "cypress/integration/cadastro.spec.js", description "cypress:integration")
-    choice(name: "BROWSER", choises: ['chrome','edge','firefox'], description: "usar navegador")
 
-  }
-  options{
-    ansiColor('xterm')
-  }
+    tools {
+        nodejs "NodeJS 14" // Nome que você deu para a instalação do NodeJS
+    }
 
-  stages{
-    stage('BUilding'){
-        steps{
-            echo "Build aplication"
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                script {
+                    // Instala as dependências do projeto
+                    sh 'npm install'
+                }
+            }
+        }
+
+        stage('Run Cypress Tests') {
+            steps {
+                script {
+                    // Executa os testes do Cypress
+                    sh 'npx cypress run'
+                }
+            }
         }
     }
-  }
-  stages('Testing'){
-    steps{
-       bat "npm i"
-        bat "npx cypress run --browser ${BROWSER} --spec {SPEC}"
-    }
-  }
 
-  stage('Deploy'){
-    steps{
-        echo "Deplooy"
+    post {
+        always {
+            // Relatórios e logs dos testes podem ser capturados aqui
+            archiveArtifacts artifacts: 'cypress/screenshots/**/*.*', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'cypress/videos/**/*.*', allowEmptyArchive: true
+        }
+        failure {
+            // Você pode configurar notificações aqui em caso de falha
+            echo 'Os testes falharam!'
+        }
     }
-  }
-
-  post{
-    always{
-
-    }
-  }
 }
