@@ -7,11 +7,11 @@ pipeline {
 
   }
   options{
-
+    ansiColor('xterm')
   }
 
   stages{
-    stage('Build'){
+    stage('BUilding'){
         steps{
             echo "Build aplication"
         }
@@ -19,8 +19,8 @@ pipeline {
   }
   stages('Testing'){
     steps{
-       
-        bat "npx cypress run"
+       bat "npm i"
+        bat "npx cypress run --browser ${BROWSER} --spec {SPEC}"
     }
   }
 
