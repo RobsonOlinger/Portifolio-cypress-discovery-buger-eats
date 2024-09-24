@@ -1,35 +1,13 @@
 pipeline {
-  agent any
- 
- 
-  tools {nodejs "Node"}
- 
- 
-  environment {
-      CHROME_BIN = '/bin/google-chrome'
-   
-  }
-  stages {
-      stage('Dependencies') {
-          steps {
-              sh 'npm i'
-          }
-      }
-      stage('e2e Tests') {
-       
-            stage('Test 1') {
-                 steps {
-               sh 'npm run cypress:ci'
-                 }
-              }
-           
-        
-    
-      stage('Deploy') {
-          steps {
-              echo 'Deploying....'
-          }
-      }
-  }
-}
+    environment {
+        NPM_CONFIG_PREFIX = 'C:\\ProgramData\\npm'
+        NPM_CONFIG_CACHE = 'C:\\ProgramData\\npm-cache'
+    }
+    stages {
+        stage('Run Cypress') {
+            steps {
+                sh 'npx cypress run'
+            }
+        }
+    }
 }
