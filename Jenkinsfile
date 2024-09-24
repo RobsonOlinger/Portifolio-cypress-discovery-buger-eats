@@ -4,14 +4,7 @@ pipeline {
    
 
     stages {
-        stage('Install Dependencies') {
-            steps {
-                script {
-                    // Instala as dependências do projeto
-                    sh 'npm install'
-                }
-            }
-        }
+        
 
         stage('Run Cypress Tests') {
             steps {
