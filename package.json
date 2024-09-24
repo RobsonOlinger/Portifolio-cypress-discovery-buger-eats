@@ -4,12 +4,12 @@
   "description": "Projeto de teste de aceitação do app Buger eats",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open"
+    "test": "npx cypress run"
   },
   "author": "Robson OLinger",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^9.7.0",
+    "cypress": "^12.10.0",
     "cypress-file-upload": "^5.0.8",
     "faker": "^5.5.3",
     "gerador-validador-cpf": "^5.0.2"
