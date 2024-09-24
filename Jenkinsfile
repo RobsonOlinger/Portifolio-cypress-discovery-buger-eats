@@ -1,9 +1,7 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs "NodeJS 14" // Nome que você deu para a instalação do NodeJS
-    }
+   
 
     stages {
         stage('Install Dependencies') {
