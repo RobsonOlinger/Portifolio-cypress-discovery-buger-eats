@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     // Executa os testes do Cypress
-                    bat 'npx cypress run'
+                    bat 'npm cypress run'
                 }
             }
         }
