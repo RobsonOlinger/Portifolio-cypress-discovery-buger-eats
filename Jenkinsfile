@@ -9,14 +9,7 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                script {
-                    // Instalar o Node.js
-                    sh """
-                        curl -sL https://deb.nodesource.com/setup_${NODE_VERSION} | bash -
-                        apt-get install -y nodejs
-                    """
-                }
-                
+                           
                 // Instalar as dependências do projeto (Cypress incluído)
                 sh 'npm install'
             }
