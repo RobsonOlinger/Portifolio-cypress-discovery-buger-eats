@@ -2,7 +2,7 @@ pipeline {
   agent {
     // this image provides everything needed to run Cypress
     docker {
-      image 'cypress/base:20.14.0'
+      image 'cypress/browsers:node18.12.0-chrome103-ff107'
     }
   }
 
